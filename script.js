@@ -77,19 +77,23 @@ resetBtn.addEventListener("click", resetTimer);
 pomodoroBtn.addEventListener("click", setPomodoroTimer);
   
   function setPomodoroTimer() {
-    if (!isRunning) {
+    if (!isPomodoro) {
       isPomodoro = true;
       minutes = 25;
       seconds = 0;
+      pomodoroBtn.classList.add("active");
+      breakBtn.classList.remove("active");
       setTimer();
     }
  }
 
   function setBreakTimer() {
-    if (!isRunning) {
+    if (isPomodoro) {
       isPomodoro = false;
       minutes = 5;
       seconds = 0;
+      breakBtn.classList.add("active");
+      pomodoroBtn.classList.remove("active");
       setTimer();
       }
       
