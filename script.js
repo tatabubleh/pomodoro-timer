@@ -28,7 +28,7 @@ function setTimer() {
     if (!isRunning) {
     isRunning = true;
     startBtn.textContent = "Stop";
-    timerInterval = setInterval(updateTimer, 1000);
+    timerInterval = setInterval(updateTimer, 10);
   }
 }
 
