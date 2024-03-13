@@ -4,6 +4,7 @@ const breakBtn = document.getElementById("break");
 const pomodoroTime = document.getElementById("pomodoro-time");
 const resetBtn = document.getElementById("reset");
 
+let timerInterval;
 let minutes = 25;
 let seconds = 0;
 let isRunning = false;
