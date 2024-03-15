@@ -43,13 +43,7 @@ function setTimer() {
 function updateTimer() {
     if (seconds === 0) {
       if (minutes === 0) {
-        if (isPomodoro) {
-          isPomodoro = false;
-          minutes = 5;
-        } else {
-          isPomodoro = true;
-          minutes = 25;
-        }
+        resetTimer()
       } else {
         minutes--;
         seconds = 59;
@@ -83,7 +77,7 @@ pomodoroBtn.addEventListener("click", setPomodoroTimer);
       seconds = 0;
       pomodoroBtn.classList.add("active");
       breakBtn.classList.remove("active");
-      setTimer();
+      resetTimer();
     }
  }
 
@@ -94,7 +88,7 @@ pomodoroBtn.addEventListener("click", setPomodoroTimer);
       seconds = 0;
       breakBtn.classList.add("active");
       pomodoroBtn.classList.remove("active");
-      setTimer();
+      resetTimer();
       }
       
     }
